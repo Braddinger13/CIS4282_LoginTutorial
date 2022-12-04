@@ -1,0 +1,40 @@
+.collapsed-grid-container {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.collapsed-grid-child-image {
+    width: 10rem;
+    height: 5rem;
+    border-radius: 33px;
+}
+
+.collapsed-grid-child-image img {
+    width: 60%;
+    height: 75%;
+    border-radius: 22px;
+}
+
+.collapsed-grid-child-email {
+    width: 15rem;
+    font-size: 1.1rem;
+    padding-left: 2rem;
+}
+
+.collapsed-grid-child-info {
+    width: 15rem;
+    font-size: 1.1rem;
+    padding-left: 2rem;
+}
+
+.collapsed-grid-child-buttons {
+    margin-left: auto;
+    order: 2;
+}
+
+.userInfo {
+    width: 100%;
+}

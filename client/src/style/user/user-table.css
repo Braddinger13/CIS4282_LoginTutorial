@@ -1,0 +1,27 @@
+.userTable {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+}
+
+.userHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.userBlock {
+    display: flex;
+    background-color: bisque;
+    padding: 1rem;
+    border: 0.2rem solid;
+    border-radius: 0.3rem;
+    margin: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.editButton {
+    margin-left: 1rem;
+}

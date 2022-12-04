@@ -1,0 +1,36 @@
+body, html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.spaPage {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.headerText {
+    font-size: 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 99%;
+    background-color: rgba(219, 219, 219, 0.616);
+}
+
+.view {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 7rem;
+}
+

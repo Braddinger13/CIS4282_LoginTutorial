@@ -1,0 +1,25 @@
+.updateShow {
+    border: 3px solid black;
+    background-color: #FBE4C4;
+    position: fixed;
+    z-index: 2;
+    left: 33%;
+    top: 25%;
+    border-radius: 10%;
+}
+
+.updateHide {
+    position: fixed;
+    z-index: 2;
+    left: 5rem;
+    top: 6rem;
+    visibility: hidden;
+}
+
+.modal {
+    padding: 3rem;
+}
+
+.cancelButton {
+    margin-bottom: 1rem;
+}

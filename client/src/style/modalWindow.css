@@ -1,0 +1,15 @@
+.modalWindow{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    z-index: 3;
+    
+    background-color: #bb9362;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 3px black;
+}
+
+.modalWindow button{
+    margin-left: 0.5rem;
+}
