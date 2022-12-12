@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import axios from "axios";
 import LoginUser from "./LoginUser";
 import ViewProfile from "./ViewProfile";
@@ -18,6 +18,29 @@ function Login() {
     setPassword(event.target.value);
   }
 
+  useEffect(() => {
+    //an asynchronous function that will either return the API data or an error
+    async function getLoggedInUser() {
+      try {
+        //we use the "await" keyword here because we have to wait for this API call to complete.
+        //we cannot continue without the information returned here.
+        const res = await fetch(process.env.REACT_APP_API_URL + "/getLoggedIn");
+
+        //res.json parses the JSON response and returns a JS Object insead
+        const data = await res.json();
+
+        //set our userList array with our JS Object
+        setLoginUser(data);
+      } catch (err) {
+        //error catching
+        console.log(err);
+      }
+    }
+
+    getLoggedInUser();
+  }, []);
+
+
   function loginSubmit(e) {
     e.preventDefault();
 
@@ -30,21 +53,12 @@ function Login() {
       .post(process.env.REACT_APP_API_URL + "/login", loginObj)
       .then((res) => {
         console.log(res.data);
+        window.parent.location = window.parent.location.href
       })
       .catch((err) => {
         console.log(err);
       });
-
-    axios
-      .get(process.env.REACT_APP_API_URL + "/getLoggedIn")
-      .then((res) => {
-        setLoginUser(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    console.log(loginUser);
+ 
   }
 
   return (
